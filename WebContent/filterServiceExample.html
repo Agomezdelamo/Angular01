@@ -1,0 +1,40 @@
+
+<head runat="server">
+<!-- TUTORIAL AQUI, Y HAY QUE TIRAR CON ANGULAR 1.9 Y DESPLEGAR EN UN SERVIDOR -->
+    <title></title>
+    <script src="js/angular.min.js"></script>
+    <script>
+        function x($scope, $filter) {
+            $scope.cars = [
+                { carId: 001, carName: 'Santro' },
+                { carId: 002, carName: 'i10 Grand' },
+                { carId: 003, carName: '120' },
+                { carId: 004, carName: 'Verna' },
+                { carId: 005, carName: 'City' }];
+ 
+            $scope.cars2 = $scope.cars;
+ 
+            $scope.$watch('search', function (val) {
+                $scope.cars = $filter('filter')($scope.cars2, val);
+            });
+        };
+    </script>
+</head>
+<body>
+    <form carId="form1" runat="server">
+    <div ng-app>
+    <div ng-controller="x">
+        <input type="text" ng-model="search">
+        <table>
+            <tbody>
+                <tr ng-repeat="car in cars">
+                    <td>{{car.carId}}</td>
+                    <td>{{car.carName}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+    </form>
+</body>
+</html>

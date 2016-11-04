@@ -1,0 +1,38 @@
+directivas: tags html que le dicen a angular
+que tire algo código javascript.
+
+ng-app="" --directiva para asociar modulos al html
+ng-controller="" --directiva para asociar controladores al html
+los controladores pueden recibir alias.
+ng-show="" --renderiza o no por booleano
+ng-src="" --meter una variable como fuente de una imagen, de esta forma, 
+la carga de la imagen no se produce hasta que no se evalua primero la expresión del src.
+ng-init="" --valor inicial de una variable.
+ng-class="" --condición booleana para pintar clases
+ng-model="" --une la propiedad de la vista con la variable del controlador.
+ng-include="" --para insertar fragmentos de html, hay que meterlos como un string por lo que se mete en el valro con comillas simples.
+
+servicios: cuando angular se carga, crea algo llamado injector, 
+cuando se llama a los servicios desde un controlador, el injector los registra como servicios
+disponibles.
+cuando nuestra aplicación carga, registra nuestro controlador con el injector, y le dice a este que 
+va a necesitar los servicios declarados.
+
+Entonces cuando carga nuestra pagina y nuestro controlador es usado, 
+el inyector coge los servicios que necesita nuestro controlador y las pasa como argumentos.
+Esto es la injeccion de dependencias
+
+modulos: 
+piezas de código de la aplicación angular.
+
+expressiones:
+valores dinámicos en el html
+
+controladores: 
+donde definimos los valores y lógica de la aplicación.
+
+filtros:
+modifican la visualización de un campo o variable en la vista, pueden ser patrones de fechas, 
+limites a los carácteres de un string, transformar minusculas a mayusculas... ordenar un repeat por un campo,
+order by.. '-price' menor integer de precio a mayor.
+
